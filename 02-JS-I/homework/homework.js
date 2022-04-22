@@ -63,18 +63,20 @@ function sonIguales(x, y) {
   // Tu código:
   if(x === y){
      return true;
+  } else {
+    return false;
   }
-  return false;
 }
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if((str1.length) === (str2.length)){
-     return true;
-  }
-  return false;
+  return str1.length === str2.length;
+  //if((str1.length) === (str2.length)){
+  //   return true;
+  //}
+  //return false;
 }
 
 function menosQueNoventa(num) {
@@ -83,18 +85,16 @@ function menosQueNoventa(num) {
   // Tu código:
   if(num<90){
     return true;
+  } else {
+    return false;
   }
-  return false;
 }
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num>50){
-    return true;
-  }
-  return false;
+  return num > 50;
 }
 
 function obtenerResto(x, y) {
@@ -109,8 +109,9 @@ function esPar(num) {
   // Tu código:
   if(num%2===0){
     return true;
+  } else {
+    return false;
   }
-  return false;
 }
 
 function esImpar(num) {
@@ -119,15 +120,16 @@ function esImpar(num) {
   // Tu código:
   if(num%2===1){
     return true;
-  }
-  return false;
+  } else {
+    return false;
+  }  
 }
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return num*num;
+  return Math.pow(num, 2);
 }
 
 function elevarAlCubo(num) {
@@ -169,11 +171,12 @@ function esPositivo(numero) {
   if(numero === 0){
     return false;
   }
-  if(numero > 0){
+  else if(numero > 0){
     return "Es positivo";
   }
-  {return "Es negativo";}
-  
+  else {
+    return "Es negativo";
+  }
 }
 
 function agregarSimboloExclamacion(str) {
@@ -226,23 +229,34 @@ function deEuroAdolar(euro){
   return euro*1.20;
 }
 
-
-function esVocal(letra){
+/*function esVocal(letra){
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
   //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  
-  if( letra === a || letra === e || letra === i || letra === o || letra === u ){
-    return "Es vocal";
-  }
-  return "Dato incorrecto";}
   if( letra.length > 1 ){
     return "Dato incorrecto";
   }
-}
+  if( letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u" ){
+    return "Es vocal";
+  } else {
+  return "Dato incorrecto";}
+}*/
 
+function esVocal(letra){
+  let resultado;
+
+  if( letra.length > 1 ){
+    resultado="Dato incorrecto";
+  } else {
+    if( letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u" ){
+      resultado="Es vocal";
+    } else {
+      resultado="Dato incorrecto";}
+  }
+  return resultado;
+}
 
 
 // No modificar nada debajo de esta línea
@@ -281,5 +295,5 @@ module.exports = {
   retornarPerimetro,
   areaDelTriangulo,
   deEuroAdolar,
-  esVocal,
+  esVocal
 };
