@@ -7,9 +7,15 @@
 1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
 
  * Variables
+ son contenedores de valores es decir se puede usar una palabra clave para guardar un valor, ese valor puede ser numerico o string(una/s palabra).
+
  * Strings
+ son cadenas de caracteres es decir son palabras cualquieras que deben ir encerradas entre "comillas".
+
  * Funciones (argumentos, `return`)
+ 
  * Declaraciones `if`
+ 
  * Valores booleanos (`true`, `false`)
 
 
